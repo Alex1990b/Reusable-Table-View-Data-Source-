@@ -12,6 +12,13 @@
 		D984C5982147AB6800CDAC27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D984C5962147AB6800CDAC27 /* Main.storyboard */; };
 		D984C59A2147AB6C00CDAC27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D984C5992147AB6C00CDAC27 /* Assets.xcassets */; };
 		D984C59D2147AB6C00CDAC27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D984C59B2147AB6C00CDAC27 /* LaunchScreen.storyboard */; };
+		D984C5A62147C77800CDAC27 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D984C5A42147C77800CDAC27 /* PersonTableViewCell.swift */; };
+		D984C5A72147C77800CDAC27 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D984C5A52147C77800CDAC27 /* PersonTableViewCell.xib */; };
+		D984C5AB2147DF1C00CDAC27 /* UITableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D984C5AA2147DF1C00CDAC27 /* UITableExtension.swift */; };
+		D984C5AF2147DF7A00CDAC27 /* ReusableCellProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D984C5AE2147DF7A00CDAC27 /* ReusableCellProtocols.swift */; };
+		D984C5B12147DFE000CDAC27 /* TableViewGenerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D984C5B02147DFE000CDAC27 /* TableViewGenerable.swift */; };
+		D984C5B42147E08D00CDAC27 /* TableViewGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D984C5B32147E08D00CDAC27 /* TableViewGenerator.swift */; };
+		D984C5BA2147E12700CDAC27 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D984C5B92147E12700CDAC27 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		D984C5992147AB6C00CDAC27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D984C59C2147AB6C00CDAC27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D984C59E2147AB6C00CDAC27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D984C5A42147C77800CDAC27 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		D984C5A52147C77800CDAC27 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
+		D984C5AA2147DF1C00CDAC27 /* UITableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableExtension.swift; sourceTree = "<group>"; };
+		D984C5AE2147DF7A00CDAC27 /* ReusableCellProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCellProtocols.swift; sourceTree = "<group>"; };
+		D984C5B02147DFE000CDAC27 /* TableViewGenerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewGenerable.swift; sourceTree = "<group>"; };
+		D984C5B32147E08D00CDAC27 /* TableViewGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewGenerator.swift; sourceTree = "<group>"; };
+		D984C5B92147E12700CDAC27 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,93 @@
 		D984C5912147AB6800CDAC27 /* ReusableTableView */ = {
 			isa = PBXGroup;
 			children = (
+				D984C5B52147E0C600CDAC27 /* Presentation */,
+				D984C5B22147E07100CDAC27 /* Helpers */,
+				D984C5AC2147DF3F00CDAC27 /* Protocols */,
+				D984C5A82147DEF000CDAC27 /* Extensions */,
 				D984C5922147AB6800CDAC27 /* AppDelegate.swift */,
-				D984C5942147AB6800CDAC27 /* ViewController.swift */,
-				D984C5962147AB6800CDAC27 /* Main.storyboard */,
 				D984C5992147AB6C00CDAC27 /* Assets.xcassets */,
 				D984C59B2147AB6C00CDAC27 /* LaunchScreen.storyboard */,
 				D984C59E2147AB6C00CDAC27 /* Info.plist */,
 			);
 			path = ReusableTableView;
+			sourceTree = "<group>";
+		};
+		D984C5A82147DEF000CDAC27 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D984C5A92147DF0900CDAC27 /* UI */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D984C5A92147DF0900CDAC27 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D984C5AA2147DF1C00CDAC27 /* UITableExtension.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D984C5AC2147DF3F00CDAC27 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D984C5AD2147DF4800CDAC27 /* ReusableViw */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D984C5AD2147DF4800CDAC27 /* ReusableViw */ = {
+			isa = PBXGroup;
+			children = (
+				D984C5AE2147DF7A00CDAC27 /* ReusableCellProtocols.swift */,
+				D984C5B02147DFE000CDAC27 /* TableViewGenerable.swift */,
+			);
+			path = ReusableViw;
+			sourceTree = "<group>";
+		};
+		D984C5B22147E07100CDAC27 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D984C5B32147E08D00CDAC27 /* TableViewGenerator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D984C5B52147E0C600CDAC27 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D984C5B82147E11700CDAC27 /* Models */,
+				D984C5B72147E0FE00CDAC27 /* Controllers */,
+				D984C5B62147E0D200CDAC27 /* Cells */,
+				D984C5962147AB6800CDAC27 /* Main.storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D984C5B62147E0D200CDAC27 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D984C5A52147C77800CDAC27 /* PersonTableViewCell.xib */,
+				D984C5A42147C77800CDAC27 /* PersonTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D984C5B72147E0FE00CDAC27 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D984C5942147AB6800CDAC27 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D984C5B82147E11700CDAC27 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D984C5B92147E12700CDAC27 /* Person.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +217,7 @@
 			files = (
 				D984C59D2147AB6C00CDAC27 /* LaunchScreen.storyboard in Resources */,
 				D984C59A2147AB6C00CDAC27 /* Assets.xcassets in Resources */,
+				D984C5A72147C77800CDAC27 /* PersonTableViewCell.xib in Resources */,
 				D984C5982147AB6800CDAC27 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +229,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D984C5AF2147DF7A00CDAC27 /* ReusableCellProtocols.swift in Sources */,
+				D984C5B12147DFE000CDAC27 /* TableViewGenerable.swift in Sources */,
+				D984C5AB2147DF1C00CDAC27 /* UITableExtension.swift in Sources */,
+				D984C5A62147C77800CDAC27 /* PersonTableViewCell.swift in Sources */,
 				D984C5952147AB6800CDAC27 /* ViewController.swift in Sources */,
 				D984C5932147AB6800CDAC27 /* AppDelegate.swift in Sources */,
+				D984C5BA2147E12700CDAC27 /* Person.swift in Sources */,
+				D984C5B42147E08D00CDAC27 /* TableViewGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
